@@ -1,6 +1,8 @@
 <?php
+namespace AliQasemzadeh\ZibalFacilities;
 
-class ServiceProvider extends \Illuminate\Support\ServiceProvider
+use Illuminate\Support\ServiceProvider;
+class ZibalFacilitiesServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {

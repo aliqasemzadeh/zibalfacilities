@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AliQasemzadeh\\ZibalFacilities\\ServiceProvider"
+                "AliQasemzadeh\\ZibalFacilities\\ZibalFacilitiesServiceProvider"
             ]
         }
     }
