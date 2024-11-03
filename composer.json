@@ -1,0 +1,19 @@
+{
+    "name": "aliqasemzadeh/zibalfacilities",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^11.30"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aliqasemzadeh\\Zibalfacilities\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ali Qasemzadeh",
+            "email": "aliqasemzadeh7@gmail.com"
+        }
+    ]
+}
