@@ -5,12 +5,18 @@ class Facility {
     private $token;
     public $api_url;
 
-    public function __construct(?string $token)
+    public function __construct(?string $token, ?string $api_url)
     {
         if($token) {
             $this->setToken($token);
         } else {
             $this->setToken(config('zibal.api_token'));
+        }
+
+        if($api_url) {
+            $this->setApiUrl($api_url);
+        } else {
+            $this->setToken(config('zibal.api_url'));
         }
 
     }
@@ -35,5 +41,10 @@ class Facility {
     public function setToken(string $token)
     {
         $this->token = $token;
+    }
+
+    public function setApiUrl(string $url)
+    {
+        $this->api_url = $url;
     }
 }
