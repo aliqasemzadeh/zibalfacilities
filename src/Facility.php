@@ -5,7 +5,7 @@ class Facility {
     private $token;
     public $api_url;
 
-    public function __construct(?string $token, ?string $api_url)
+    public function __construct(string $token = null, ?string $api_url = null)
     {
         if($token) {
             $this->setToken($token);
