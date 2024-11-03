@@ -3,8 +3,8 @@
     "type": "library",
     "minimum-stability": "dev",
     "require": {
-        "illuminate/support": "^11.*",
-        "guzzlehttp/guzzle": "^7.*"
+        "illuminate/support": "^11.0",
+        "guzzlehttp/guzzle": "^7.0"
     },
     "license": "MIT",
     "autoload": {
