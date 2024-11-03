@@ -1,6 +1,7 @@
 {
     "name": "aliqasemzadeh/zibalfacilities",
     "type": "library",
+    "minimum-stability": "dev",
     "require": {
         "illuminate/support": "^11.30",
         "guzzlehttp/guzzle": "^7.9"
