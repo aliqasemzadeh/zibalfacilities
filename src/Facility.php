@@ -1,4 +1,5 @@
 <?php
+namespace AliQasemzadeh\ZibalFacilities;
 
 class Facility {
     private $token;
