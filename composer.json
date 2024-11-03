@@ -2,7 +2,8 @@
     "name": "aliqasemzadeh/zibalfacilities",
     "type": "library",
     "require": {
-        "illuminate/support": "^11.30"
+        "illuminate/support": "^11.30",
+        "guzzlehttp/guzzle": "^7.9"
     },
     "license": "MIT",
     "autoload": {
