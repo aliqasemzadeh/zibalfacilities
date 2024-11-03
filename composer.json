@@ -8,7 +8,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Aliqasemzadeh\\Zibalfacilities\\": "src/"
+            "AliQasemzadeh\\ZibalFacilities\\": "src/"
         }
     },
     "authors": [
@@ -16,5 +16,12 @@
             "name": "Ali Qasemzadeh",
             "email": "aliqasemzadeh7@gmail.com"
         }
-    ]
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AliQasemzadeh\\ZibalFacilities\\ServiceProvider"
+            ]
+        }
+    }
 }
