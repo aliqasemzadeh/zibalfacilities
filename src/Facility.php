@@ -2,6 +2,8 @@
 namespace AliQasemzadeh\ZibalFacilities;
 
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 
 class Facility {
     protected $token;
@@ -35,18 +37,21 @@ class Facility {
 
     public function call(string $method, array $params)
     {
-        $client = new \GuzzleHttp\Client();
-        $headers = [
-            'Content-Type' => 'application/json',
-            'Authorization' => $this->token,
-        ];
-        $body = json_encode($params);
         try {
-            $request = new Request('POST', $this->api_url . "/" . $method, $headers, $body);
-            $res = $client->sendAsync($request)->wait();
-            return $res->getBody();
+            $client = new Client();
+            $headers = [
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Bearer ' . $this->token
+            ];
+            $body = json_encode($params);
+            $request = new Request('POST', $this->api_url .'/'.$method, $headers, $body);
+            $result = $client->sendAsync($request)->wait();
+            if($result->result != 1) {
+                throw new \Exception($result->message);
+            }
+            return $result->body;
         } catch (\GuzzleHttp\Exception\ClientException $e) {
-
+            Log::error($e->getMessage());
         }
     }
 
